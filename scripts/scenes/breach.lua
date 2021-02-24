@@ -14,7 +14,8 @@ scenes.breach = object:new({
       bottom_gate:close()
     end)
 
-    breach = entities.breach:new()
+    breach = entities.breach:new({ y = -64 })
+    breach:animate({ y = 12 }, 60, easeoutquad)
     breach.on_hit = function(breach, other)
       if other == projectile then
         end_time = t()
