@@ -36,10 +36,9 @@ scenes.transition = object:new({
     end
 
     local prefixes = { "alpha", "beta", "charlie", "delta" }
-    local level_num = ((level_id - 1) % 3) + 1
-    local level_name = "sector "..prefixes[((level_id - 1)\3) + 1].."-"..level_num
+    local level_name = "sector "..prefixes[level_id]
 
-    if level_id > #levels then
+    if level_id > #levels[world] then
       level_name = "breach"
       crossfade_music(17)
     end
@@ -49,7 +48,7 @@ scenes.transition = object:new({
 
     wait(90, function()
       level_text:animate({ height = 0 }, 15, easeoutquad, function()
-        load_scene(level_id > #levels and "breach" or "level")
+        load_scene(level_id > #levels[world] and "breach" or "level")
       end)
     end)
   end,

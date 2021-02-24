@@ -26,7 +26,10 @@ scenes.level = object:new({
       end
     end
 
-    local current_level = levels[level_id]
+    local world = 1
+    if (player.projectile.charged) world = 2
+    if (player.projectile.eggplant) world = 3
+    local current_level = levels[world][level_id]
     local pool = split(current_level)
     local positions = {
       {18,16}, {32,16}, {56,16}, {80,16}, {104,16},

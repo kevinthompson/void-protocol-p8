@@ -83,7 +83,7 @@ scenes.breach = object:new({
                   player:pickup(projectile)
                 end)
 
-                say "great work! the breach has been contained."
+                say "the breach has been contained. that was easier than expected!"
                 say "be sure to dispose of that charged cell someplace safe."
                 say("we'll need someone with your experience when the next breach appears.", function()
                   load_scene "win"

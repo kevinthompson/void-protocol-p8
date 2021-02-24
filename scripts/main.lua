@@ -14,6 +14,7 @@ start_time = t()
 end_time = t()
 flash_frames = 0
 flash_color = 7
+world = 1
 
 function _init()
   set_palette()
