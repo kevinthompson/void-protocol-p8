@@ -1,3 +1,5 @@
+-- quicksort by JWinslow23
+
 function quick_sort_hp(tbl,lo,hi)
   lo,hi=lo or 1,hi or #tbl
   if lo<hi then

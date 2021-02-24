@@ -1,3 +1,7 @@
+-- easing function cheatsheet
+-- by valeradhd
+-- source: https://www.lexaloffle.com/bbs/?tid=40577
+
 animation = {
   pool = {},
 
