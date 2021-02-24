@@ -16,34 +16,39 @@ scenes.title = object:new({
       y = previous_scene != scenes.credits and -32 or -8
     }):animate({ y = -8 }, 30, easeoutquad)
 
-    add(menu_items, {
-      "start game",
-      function()
-        if tutorial_complete then
-          music(player.projectile.charged and 7 or 1, 500)
-          start_time = t()
-          load_scene "transition"
-        else
-          load_scene "tutorial"
-        end
-      end
-    })
-
     if tutorial_complete then
-      add(menu_items, {
-        "tutorial",
-        function()
-          load_scene "tutorial"
-        end
-      })
+      menu_items = {
+        {
+          "start game",
+          function()
+            music(player.projectile.charged and 7 or 1, 500)
+            start_time = t()
+            load_scene "transition"
+          end
+        },
+        {
+          "tutorial",
+          function()
+            load_scene "tutorial"
+          end
+        },
+        {
+          "credits",
+          function()
+            load_scene "credits"
+          end
+        }
+      }
+    else
+      menu_items = {
+        {
+          "press    to start",
+          function()
+            load_scene "tutorial"
+          end
+        }
+      }
     end
-
-    add(menu_items, {
-      "credits",
-      function()
-        load_scene "credits"
-      end
-    })
   end,
 
   update = function(self)
@@ -76,9 +81,13 @@ scenes.title = object:new({
       print_centered(item[1], y, selected and 7 or 5)
 
       if selected then
-        spr(11, 64 - ceil(#item[1] / 2) * 5 - 4, y)
-        spr(11, 64 + ceil(#item[1] / 2) * 5 - 5, y, 1, 1, true)
+        spr(11, 54 - flr((#item[1] * 4) / 2), y)
+        spr(11, 65 + flr((#item[1] * 4) / 2), y, 1, 1, true)
       end
+    end
+
+    if not tutorial_complete then
+      ? "❎", 54, 108, 8
     end
   end
 })
