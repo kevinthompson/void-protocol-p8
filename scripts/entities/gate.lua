@@ -51,12 +51,13 @@ entities.gate = entity:constructor({
 
   draw = function(self)
     local x, y = self.right_door.x, self.right_door.y
-    spr(12, x + 39, y)
 
-    for i = 1, 3 do
+    for i = 1, player.max_health do
       local offset = (i - 1) * 6
-      spr(player.health >= i and 15 or 14, x + 47 + offset, y)
+      spr(player.health >= i and 15 or 14, x + 64 - player.max_health * 6 + offset, y)
     end
+
+    spr(12, x + 56 - player.max_health * 6, y)
   end,
 
   open = function(self)
