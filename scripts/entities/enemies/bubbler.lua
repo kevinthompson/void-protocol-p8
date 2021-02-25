@@ -2,8 +2,8 @@ entities.bubbler = entities.enemy:constructor({
   health = 3,
   bubble_timer = 180,
   exclusive = true,
-  vx = 0.5,
-  vy = 0.5,
+  vx = 0.75,
+  vy = 0.75,
   sprite = 80,
   bubbles = {},
 

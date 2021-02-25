@@ -9,7 +9,7 @@ entities.diver = entities.enemy:constructor({
   end,
 
   attack = function(self)
-    if self.mode == "seek" and self.x + 8 > player.x + 4 and self.x + 8 < player.x + 20 then
+    if self.mode == "seek" and player.control and self.x + 8 > player.x + 4 and self.x + 8 < player.x + 20 then
       self.y += sin(t())
       self.mode = "windup"
       self.vx = 0
