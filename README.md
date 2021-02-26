@@ -1,4 +1,5 @@
 # Void Protocol
+## Eggplant Podcast Community Game Jam Edition
 
 ![](https://github.com/kevinthompson/void-protocol-p8/blob/master/screenshot.png)
 
