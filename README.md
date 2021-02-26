@@ -2,9 +2,13 @@
 
 ![](https://github.com/kevinthompson/void-protocol-p8/blob/master/screenshot.png)
 
-Void Protocol is a small PICO-8 space shooter game made for the
-[Eggplant Show](https://eggplant.show/) [community gamejam](https://itch.io/jam/eggplant-podcast-community-game-jam). In this game you have a single projectile
-that you need to use to defeat the enemies and seal a breach in space.
+-----
+
+This branch is for ongoing development of Void Protocol. If you're interested
+in the version that was submitted to the Eggplant Show community game jam,
+[check out the `eggplant-game-jam-02-2021` branch](https://github.com/kevinthompson/void-protocol-p8/tree/eggplant-game-jam-02-2021).
+
+-----
 
 Fight your way through nine levels, firing and collecting your projectile.
 The game is available to play at [https://kevinthompson.itch.io/void-protocol](https://kevinthompson.itch.io/void-protocol).
